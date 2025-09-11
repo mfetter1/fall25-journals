@@ -1,0 +1,65 @@
+---
+title: "2025-09-03."
+format:
+  html: default
+  pdf: default
+params:
+  course: "mc501"
+  word_min: 450
+  word_max: 500
+  p1: 'Choose either the Nazi medical experiments or the Tuskegee syphilis study and reflect on what that case teaches us about the need for ethical safeguards in research. Why do you think these events had such a lasting impact on how research is conducted today? How might studying these cases shape your behavior as a future researcher?'
+  p2: 'Imagine you are researching a public social media platform like X (formerly Twitter), Reddit, or TikTok. Would you consider the content you’re analyzing to be public or private? Would you need to obtain informed consent? Why or why not? Reflect on the ethical gray areas that emerge in digital research and how you would navigate them.'
+  p3: 'Think ahead to a study you might conduct as part of this course. What would it look like to fully honor the principles of respect for persons, beneficence, and justice in your research? Identify at least one concrete action you would take during your study’s design or data collection to uphold each of these three ethical principles.'
+---
+
+## Choose **one** prompt to answer
+
+> **Prompt B:** `r params$p2`
+
+------------------------------------------------------------------------
+
+## Response
+
+<!-- RESPONSE-START -->
+
+A topic I’m curious about learning more about is how college athletes can use TikTok to build their own personal brand. A research question for that would be “How do collegiate college athletes use TikTok to shape their own personal image and engage with fans. I would begin by looking for popular college athletes on TikTok and look at the type of videos they have on their page. I would investigate their “personal brand” and how they present themselves to the public and how their fans are interacting with their content (likes, comments, shares, and following). I would also review any existing studies on social media branding, digital marketing, and athlete-to-fan communication to have a better understanding of information that’s already been found and any gaps that still need to be researched. I would then work on my design stage, where I would collect TikTok videos posted by NCAA athletes that represent content of them playing their sport, personal life, humor, trends, and endorsements. I would also measure the engagement they receive on those specific posts (likes, comments, shares). I would set up interviews with those specific athletes that I gathered data from to gain their perspective about their own branding strategies, what their goals are with their posts, and how they think their audience perceives them. For the data collecting stage, I would identify between 40-50 athletes who are active on TikTok and gather a specific number of their most recent/most viewed posts (around 15 videos) to keep my data consistent. I would set up a Zoom call with the athletes to interview them and record their responses. In the data analysis stage, I would first examine the engagement the athletes received on their videos and compare them to the type of video it is (ex., lifestyle, humor, trendy). I would see what type of videos gained the most views, likes, shares, and comments. I would then look at the response from the interviews and see if I can identify any patterns from what the athletes said. I would then compare these two sets of data and see if there were any connections between them. In my final step, I would create a presentation of my findings and present them to collegiate athletes through in-person and virtual seminars. I would also publish my findings in a formal research paper for future athletes to learn from and enjoy for personal interests. <!-- RESPONSE-END -->
+
+------------------------------------------------------------------------
+
+## Word Count & Range Check
+
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+get_response_text <- function() {
+  f <- knitr::current_input()
+  if (is.null(f) || !file.exists(f)) return("")
+  x <- readLines(f, warn = FALSE)
+  # Find the lines that EXACTLY match the start/end markers
+  s <- grep("^<!-- RESPONSE-START -->$", x)
+  e <- grep("^<!-- RESPONSE-END -->$", x)
+  if (length(s) != 1 || length(e) != 1 || e <= s) return("")
+  paste(x[(s + 1L):(e - 1L)], collapse = "\n")
+}
+count_words <- function(txt) {
+  # Remove code blocks and inline code before counting
+  txt <- gsub("```[\\s\\S]*?```", " ", txt, perl = TRUE)
+  txt <- gsub("`[^`]*`", " ", txt, perl = TRUE)
+  # Keep letters, numbers, spaces, hyphens, and apostrophes
+  txt <- gsub("[^\\p{L}\\p{N}\\s'-]", " ", txt, perl = TRUE)
+  # Split by whitespace and count non-empty words
+  words <- unlist(strsplit(txt, "\\s+", perl = TRUE))
+  words <- words[nzchar(words)]
+  length(words)
+}
+txt <- get_response_text()
+n <- count_words(txt)
+minw <- as.integer(params$word_min)
+maxw <- as.integer(params$word_max)
+in_range <- n >= minw && n <= maxw
+cat(sprintf("**Word count:** %d  \n", n))
+cat(sprintf("**Required range (%s):** %d–%d words  \n",
+            toupper(params$course), minw, maxw))
+cat(if (in_range) "**Status:** ✅ In range\n" else "**Status:** ❌ Out of range\n")
+```

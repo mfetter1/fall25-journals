@@ -1,0 +1,65 @@
+---
+title: "2025-09-02"
+format:
+  html: default
+  pdf: default
+params:
+  course: "mc501"
+  word_min: 450
+  word_max: 500
+  p1: 'Think about a claim you’ve seen online that you weren’t sure was true. How would the principles of empiricism and control help you design a study to test whether it was accurate?'
+  p2: 'Choose a topic you’re curious about in media or communication (e.g., the effect of streaming on movie watching, how politicians use TikTok, portrayals of families on TV). Write a specific research question about it. Then, briefly describe what you would do in each of the five stages of the research workflow (Conceptualization, Design, Data Collection, Data Analysis, Communication) to answer it.'
+  p3: 'Describe a time you learned a digital tool (in any context—school, work, a hobby) without really understanding the reasoning behind what you were doing. How might knowing the "why"—the tool-agnostic principles—have helped you use it more effectively, solve problems, or even choose a better tool for the task?'
+---
+
+## Choose **one** prompt to answer
+
+> **Prompt B:** `r params$p2`
+
+------------------------------------------------------------------------
+
+## Response
+
+<!-- RESPONSE-START -->
+
+If I were to research a public social media platform, my first thought is that I would initially consider the content to be public since the posts on those platforms are made available to a wide audience. Users understand that if they have a public profile, anyone on that social media platform can view their postings. Even if an account is private, that doesn’t prevent people from screenshoting or screen recording their content and posting it publicly. However, when considering whether informed consent is required, there is no straightforward answer. If I were just searching for specific videos for my personal entertainment, like memes, trending content, or humorous content, I wouldn’t feel the need to obtain informed consent because those videos were posted publicly on that platform. If I were to conduct research on a particular topic and need to pull specific quotes or videos for examples, ethically, I would feel responsible for obtaining that consent even if their content was posted publicly. For example, for my job, I needed to get content at the SIUE Rainbow Affinity Welcome event, recording the attendees answering some simple questions to be posted on Instagram. A lot of the attendees we ran into didn’t want to be filmed. Although they may post publicly on their own accounts, it can be different when it comes to a broader audience they are unaware of. This is how some of those gray areas can occur when doing digital research. Although content is made public, ethically, that doesn’t mean users view the content the same way as researchers. Additionally, the way one consumer interprets content is different from the way another consumer interprets content. For example, a TikTok creator with a small following may not expect their content to be used for research purposes. Students at SIUE may not think their personal content would be used in a research study. To begin this approach, I would start with a cautious and respectful approach. If I were to offer to remove usernames or blur faces of specific content, if the users were on the edge of giving consent to use their content. I would try my best not to use direct quotes or content that could be easily searched and traced back to the user. Providing paraphrasing and discrete images to still capture any patterns, but not expose individuals. I would carefully focus on the participants' well-being and privacy by respecting the public nature of social media and the personal intentions behind everyone who posts publicly.<!-- RESPONSE-END -->
+
+------------------------------------------------------------------------
+
+## Word Count & Range Check
+
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+get_response_text <- function() {
+  f <- knitr::current_input()
+  if (is.null(f) || !file.exists(f)) return("")
+  x <- readLines(f, warn = FALSE)
+  # Find the lines that EXACTLY match the start/end markers
+  s <- grep("^<!-- RESPONSE-START -->$", x)
+  e <- grep("^<!-- RESPONSE-END -->$", x)
+  if (length(s) != 1 || length(e) != 1 || e <= s) return("")
+  paste(x[(s + 1L):(e - 1L)], collapse = "\n")
+}
+count_words <- function(txt) {
+  # Remove code blocks and inline code before counting
+  txt <- gsub("```[\\s\\S]*?```", " ", txt, perl = TRUE)
+  txt <- gsub("`[^`]*`", " ", txt, perl = TRUE)
+  # Keep letters, numbers, spaces, hyphens, and apostrophes
+  txt <- gsub("[^\\p{L}\\p{N}\\s'-]", " ", txt, perl = TRUE)
+  # Split by whitespace and count non-empty words
+  words <- unlist(strsplit(txt, "\\s+", perl = TRUE))
+  words <- words[nzchar(words)]
+  length(words)
+}
+txt <- get_response_text()
+n <- count_words(txt)
+minw <- as.integer(params$word_min)
+maxw <- as.integer(params$word_max)
+in_range <- n >= minw && n <= maxw
+cat(sprintf("**Word count:** %d  \n", n))
+cat(sprintf("**Required range (%s):** %d–%d words  \n",
+            toupper(params$course), minw, maxw))
+cat(if (in_range) "**Status:** ✅ In range\n" else "**Status:** ❌ Out of range\n")
+```
