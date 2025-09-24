@@ -1,0 +1,65 @@
+---
+title: "2025-09-23"
+format:
+  html: default
+  pdf: default
+params:
+  course: "mc501"
+  word_min: 450
+  word_max: 500
+  p1: 'The chapter opens with the story of John Snow and the Broad Street pump—an example of how sampling can reveal powerful truths about a whole system. Reflect on a time you formed a strong opinion or insight based on a small piece of evidence (e.g., a social media post, a conversation, a single article). Was that sample representative of the broader reality? What does this example teach you about the risks or rewards of inference from a small sample?'
+  p2: 'Imagine you are planning a study on how college students interact with AI tools like ChatGPT. Would you choose a probability sampling method or a non-probability one? Why? Consider your research goals—do you want to generalize to all college students or understand a specific group more deeply? Explain your choice and what trade-offs it involves in terms of access, time, cost, and generalizability.'
+  p3: 'Much of today’s research relies on digital data—tweets, posts, videos, and online surveys. This chapter explains how population bias, self-selection bias, and data availability bias can distort digital research. Choose one of these forms of bias and describe how it might affect a study of online news consumption or streaming habits. What could a researcher do to acknowledge or reduce that bias?'
+---
+
+## Choose **one** prompt to answer
+
+> **Prompt C:** `r params$p3`
+
+------------------------------------------------------------------------
+
+## Response
+
+<!-- RESPONSE-START -->
+
+One of the challenges to today’s research is the effect of self-selection biases. The way a person chooses to participate in a study or engage with online platforms differs from those who do not. These biases can affect findings and lead to misleading results if the issue is not addressed properly. When looking at the study of online news consumption, self-selection biases can easily influence the results of those findings. If a researcher conducts a voluntary online survey that asks participants how often they read the news, the platforms they prefer, and how long they spend consuming current events. People who consume a lot of news by reading the newspaper or online articles will be more likely to take the survey compared to someone who scrolls past the headlines on social media. Furthermore, if a college student is majoring in political science, they may want to participate because they may feel like they have strong feelings about the survey. Compared to other college students who use social media and glance at news headlines regularly but might ignore the survey. This could cause the study to suggest that most people are avid digital news readers, when they are actually a large portion of the population who minimally engage in the news. The same problem can occur when looking at streaming habits. Researchers looking to collect data through volunteers could purpose the question to users about what platforms they subscribe to and how often they watch. Someone who binged watched a show on Netflix or enjoys watching tv may have more to say about streaming and be more likely to participate. Compared to the users who are more casual viewers, or infrequent viewers, they may be more underrepresented. The study may overemphasize binge-watching or the popularity of some streaming platforms over others. Many people may not stream as often or use other alternatives like YouTube or Twitch. The researchers' finding may not represent the diversity of streaming behaviors of the public. To reduce self-selection biases, it requires a more strategic approach is required. One option is to look at self-reported data with digital tracking. For example, instead of doing just surveys, researchers might look at browsers’ history data or streaming logs, with the participants' consent. This could provide a more accurate, less biased picture about the behaviors since it does not depend on the participants' motivation or lifestyle to respond. Self-selection biases have their challenges of making too broad of claims from digital research. Studies about online news consumption or streaming habits can produce valuable insights, but researchers must not make overstated conclusions. Addressing self-selection bias and finding new strategies to limit it can help scholars to produce findings that better reflected the behaviors of the real-world.<!-- RESPONSE-END -->
+
+------------------------------------------------------------------------
+
+## Word Count & Range Check
+
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+get_response_text <- function() {
+  f <- knitr::current_input()
+  if (is.null(f) || !file.exists(f)) return("")
+  x <- readLines(f, warn = FALSE)
+  # Find the lines that EXACTLY match the start/end markers
+  s <- grep("^<!-- RESPONSE-START -->$", x)
+  e <- grep("^<!-- RESPONSE-END -->$", x)
+  if (length(s) != 1 || length(e) != 1 || e <= s) return("")
+  paste(x[(s + 1L):(e - 1L)], collapse = "\n")
+}
+count_words <- function(txt) {
+  # Remove code blocks and inline code before counting
+  txt <- gsub("```[\\s\\S]*?```", " ", txt, perl = TRUE)
+  txt <- gsub("`[^`]*`", " ", txt, perl = TRUE)
+  # Keep letters, numbers, spaces, hyphens, and apostrophes
+  txt <- gsub("[^\\p{L}\\p{N}\\s'-]", " ", txt, perl = TRUE)
+  # Split by whitespace and count non-empty words
+  words <- unlist(strsplit(txt, "\\s+", perl = TRUE))
+  words <- words[nzchar(words)]
+  length(words)
+}
+txt <- get_response_text()
+n <- count_words(txt)
+minw <- as.integer(params$word_min)
+maxw <- as.integer(params$word_max)
+in_range <- n >= minw && n <= maxw
+cat(sprintf("**Word count:** %d  \n", n))
+cat(sprintf("**Required range (%s):** %d–%d words  \n",
+            toupper(params$course), minw, maxw))
+cat(if (in_range) "**Status:** ✅ In range\n" else "**Status:** ❌ Out of range\n")
+```
