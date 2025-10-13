@@ -1,0 +1,71 @@
+---
+title: "2025-10-13"
+format:
+  html: default
+  pdf: default
+params:
+  course: "mc501"
+  word_min: 450
+  word_max: 500
+  p1: 'Think about a time when you were asked to take a survey—maybe in a class, at work, or online. Did any of the questions confuse you, feel biased, or leave you without an option that reflected your honest opinion? Describe one such moment. What made the question problematic, and how might you rewrite it to improve it?'
+  p2: 'Imagine you''re designing a survey for your research project. What would be the central question your survey aims to answer? List two variables you’d want to measure and describe one closed-ended and one open-ended question you would include to help you do so. Why did you choose each format?'
+  p3: 'Why do you think people often ignore or skip surveys? From your perspective as both a respondent and future researcher, what strategies would make you more likely to complete a survey? How do your answers shape the way researchers must think about sampling and nonresponse?'
+---
+
+## Choose **one** prompt to answer
+
+> **Prompt C:** `r params$p3`
+
+------------------------------------------------------------------------
+
+## Response
+
+<!-- RESPONSE-START -->
+
+I think many people avoid surveys for various reasons, including those related to convenience, motivation, and trust. From the perspective of someone who was a respondent, one of the main reasons I don’t respond to surveys is time. I, and others responding to surveys, perceive surveys as time consuming, especially if they are long and complicated. If I’m too busy, a survey does not make my list of priorities. Another reason is my lack of interest in the survey. If the topic doesn’t resonate with me or I don’t see a direct benefit from participating, I am unlikely to take it. If people feel skeptical about how the date may be used, other respondents and I may feel concerned about privacy or spam and feel discouraged to participate.
+
+Another reason people may skip surveys is because of fatigue. With today’s digital age, people are constantly asked to provide feedback through emails, shopping receipts, or pop-up notifications that people simply ignore. A poor survey design can also play a role in people not responding to surveys. If questions are too long, confusing, or repetitive, people responding to the survey may abandon it halfway through or not start it at all. Even the way surveys are sent to people matters. Most emails can be overlooked, and QR codes can seem inconvenient to access.
+
+There are some strategies I think that could help make respondents more likely to complete the survey. The first being, keeping the survey short. If I know the survey will only take a few minutes and provides a clear progress bar, I would be more inclined to take the survey. Surveys that are short and straightforward will feel like less of a burden to people taking the survey. Additionally, if there is an incentive along with the survey, motivation to take the survey increases. Small rewards like entry for a gift card or discounts can increase the willingness to respond. Additionally, having clear communication is also important. If the purpose is clearly explained upfront and how my input will contribute to something meaningful, I am more likely to participate. Finally, making sure the survey is convenient will add to the willingness to take it. If I can take a quick survey on my phone or laptop without filling in a bunch of extra steps for signing in, I am more likely to respond.
+
+These strategies show key challenges researchers face when they design surveys, especially when it comes to sampling and nonresponses. When a larger group of people ignore surveys, the sample is now unrepresentative and can lead to skewed results. For example, if highly motivated individuals with big opinions only respond, their views and opinions might not reflect the broad population. This is an issue that forces researchers to think about how they collect and interpret data. Finding ways to minimize non-responses, like follow-up reminders, a mixture of online and in-person surveys, to make participation as easy as possible.<!-- RESPONSE-END -->
+
+------------------------------------------------------------------------
+
+## Word Count & Range Check
+
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+get_response_text <- function() {
+  f <- knitr::current_input()
+  if (is.null(f) || !file.exists(f)) return("")
+  x <- readLines(f, warn = FALSE)
+  # Find the lines that EXACTLY match the start/end markers
+  s <- grep("^<!-- RESPONSE-START -->$", x)
+  e <- grep("^<!-- RESPONSE-END -->$", x)
+  if (length(s) != 1 || length(e) != 1 || e <= s) return("")
+  paste(x[(s + 1L):(e - 1L)], collapse = "\n")
+}
+count_words <- function(txt) {
+  # Remove code blocks and inline code before counting
+  txt <- gsub("```[\\s\\S]*?```", " ", txt, perl = TRUE)
+  txt <- gsub("`[^`]*`", " ", txt, perl = TRUE)
+  # Keep letters, numbers, spaces, hyphens, and apostrophes
+  txt <- gsub("[^\\p{L}\\p{N}\\s'-]", " ", txt, perl = TRUE)
+  # Split by whitespace and count non-empty words
+  words <- unlist(strsplit(txt, "\\s+", perl = TRUE))
+  words <- words[nzchar(words)]
+  length(words)
+}
+txt <- get_response_text()
+n <- count_words(txt)
+minw <- as.integer(params$word_min)
+maxw <- as.integer(params$word_max)
+in_range <- n >= minw && n <= maxw
+cat(sprintf("**Word count:** %d  \n", n))
+cat(sprintf("**Required range (%s):** %d–%d words  \n",
+            toupper(params$course), minw, maxw))
+cat(if (in_range) "**Status:** ✅ In range\n" else "**Status:** ❌ Out of range\n")
+```
