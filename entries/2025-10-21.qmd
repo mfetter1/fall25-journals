@@ -1,0 +1,73 @@
+---
+title: "2025-10-21"
+format:
+  html: default
+  pdf: default
+params:
+  course: "mc501"
+  word_min: 450
+  word_max: 500
+  p1: 'Think of a headline or news story you’ve seen that claims one thing causes another (e.g., "Teens who use social media are more likely to be depressed"). Based on what you''ve learned in this chapter, explain why this claim may or may not be valid. What type of research design would be necessary to make such a claim confidently?'
+  p2: 'Choose a communication-related research question you’re interested in (e.g., “Does political meme exposure influence voting confidence?”). Then briefly describe how you might set up a simple experiment to test that question. What would you manipulate? What would you measure? How would random assignment help strengthen your conclusions?'
+  p3: 'Experiments often require researchers to deceive participants or control aspects of their environment. Reflect on how you feel about that. Do you think the benefits of experimental knowledge are worth these trade-offs? What would be essential to include in your debrief if you had to deceive participants in your study?'
+---
+
+## Choose **one** prompt to answer
+
+> **Prompt A:** `r params$p1`
+
+> **Prompt B:** `r params$p2`
+
+> **Prompt C:** `r params$p3`
+
+---
+
+## Response
+
+<!-- RESPONSE-START -->
+I think experiments play a crucial role in furthering psychological and social science research by allowing researchers to identify a cause-and-effect relationships. However, they require manipulating variables or even deceiving their participants to maintain the integrity of the study. This brings up the question about whether the benefits of experimental knowledge gained justify the exchange of deception and control. I think that it is important that ethical principles like informed consent, remain at the center of any research involving deception. However, using deception comes with serious ethical implications. 
+Misleading participants, even if it’s temporary, can cause emotional distress, embarrassment, or feelings of betrayal once they figure out the truth. In comparison, tightly controlling a participant’s environment, like restricting their choices or exposing them to stress, can make the participants feel manipulated. To justify these trade-offs, researchers must ensure that the benefits of the study significantly outweigh the risks and that there is no alternative and no deceptive method could produce equally valid results. 
+If I were conducting a study that required deception, I would consider the debriefing process to be essential. I would provide a thorough and thoughtful debrief to help repair the trust between researcher and participant to ensure no lasting harm was done. In my debrief, I would clearly explain the true purpose of the study and the reasons for the deception and why it is necessary. I would emphasize that their participation and genuine reactions are very important to understanding the research question that the deception was not meant to trick or embarrass them. I would also open to the participant to share any questions or concerns about their experience. 
+Furthermore, I will also reiterate the participants right to withdraw their data if they feel uncomfortable with the deception after they learnt the truth. This will also help with an potential feelings of being misled. Finally, if the experiment could have caused any emotional discomfort, like anxiety or guilt, I would provide information on available support resources or counseling services. I understand that while deception and control in experiment can be ethically complex, I think that there are justified uses for it if it is used responsible and transparent. The pursuit of knowledge should not come at the cost of human dignity. Therefore, if researchers uphold ethical standards, minimize their harm, and prioritize a compassionate and honest debriefing process, the benefits of the experimental knowledge can out weight the trade-off. 
+Experiments are very important for discovery, allowing researchers to explore complex human thoughts and behaviors in ways surveys and observations can’t. Despite these ethical challenges, these studies help society progress, and improve education, healthcare, and workplace practices. As long as researchers prioritize participant welfare, transparency, and ethical accountability. The knowledge gained through experiments can meaningfully and responsibly advance our collective understanding of human nature and social interaction. 
+<!-- RESPONSE-END -->
+
+---
+
+## Word Count & Range Check
+
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+get_response_text <- function() {
+  f <- knitr::current_input()
+  if (is.null(f) || !file.exists(f)) return("")
+  x <- readLines(f, warn = FALSE)
+  # Find the lines that EXACTLY match the start/end markers
+  s <- grep("^<!-- RESPONSE-START -->$", x)
+  e <- grep("^<!-- RESPONSE-END -->$", x)
+  if (length(s) != 1 || length(e) != 1 || e <= s) return("")
+  paste(x[(s + 1L):(e - 1L)], collapse = "\n")
+}
+count_words <- function(txt) {
+  # Remove code blocks and inline code before counting
+  txt <- gsub("```[\\s\\S]*?```", " ", txt, perl = TRUE)
+  txt <- gsub("`[^`]*`", " ", txt, perl = TRUE)
+  # Keep letters, numbers, spaces, hyphens, and apostrophes
+  txt <- gsub("[^\\p{L}\\p{N}\\s'-]", " ", txt, perl = TRUE)
+  # Split by whitespace and count non-empty words
+  words <- unlist(strsplit(txt, "\\s+", perl = TRUE))
+  words <- words[nzchar(words)]
+  length(words)
+}
+txt <- get_response_text()
+n <- count_words(txt)
+minw <- as.integer(params$word_min)
+maxw <- as.integer(params$word_max)
+in_range <- n >= minw && n <= maxw
+cat(sprintf("**Word count:** %d  \n", n))
+cat(sprintf("**Required range (%s):** %d–%d words  \n",
+            toupper(params$course), minw, maxw))
+cat(if (in_range) "**Status:** ✅ In range\n" else "**Status:** ❌ Out of range\n")
+```
