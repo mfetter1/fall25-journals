@@ -1,0 +1,71 @@
+---
+title: "2025-10-26"
+format:
+  html: default
+  pdf: default
+params:
+  course: "mc501"
+  word_min: 450
+  word_max: 500
+  p1: 'Think about a media environment you engage with regularly—TikTok, news headlines, TV dramas, YouTube comments, etc. Choose one and describe a research question that could be answered through content analysis. What would you want to measure? Would you be more interested in manifest content (what’s there) or latent content (the underlying tone or message), and why?'
+  p2: 'Manual coding offers nuance; automated coding provides scale. Reflect on a situation where you believe a manual approach would be necessary despite being more time-consuming. Then, describe another situation where automation would be the better choice. What do your examples reveal about the limits and strengths of each?'
+  p3: 'When researchers assign meaning to words or visuals, especially in latent coding or sentiment analysis, they make interpretive choices. What risks might arise from misclassifying tone, intent, or topic? Why is coder training—or model training—so essential to ensure fairness, especially when analyzing issues involving identity, politics, or public opinion?'
+---
+
+## Choose **one** prompt to answer
+
+> **Prompt A:** `r params$p1`
+
+---
+
+## Response
+
+<!-- RESPONSE-START -->
+A research question I could investigate through content analysis on TikTok is, “How do college athletes use TikTok to shape their personal brand and influence audience perceptions of authenticity?” This is a question that investigates how athletes represent themselves on a platform driven by short-form video content and trends, and how that representation connects with audiences' views on credibility, relatability, and marketability. TikTok is a very new and unique site for this kind of study because it looks to combine the entertainment, self-presentation, and interaction in ways that influence both personal identity and public perception.
+
+With content analysis, I would look to measure many different factors. To start, I would identify the types of content athletes post, like game highlights, training videos, lifestyle, and fun trends, to see which videos are the most common. I would also analyze their engagement metrics, including their likes, comments, and shares to determine which types of posts generate the most audience interaction. I would also look to measure self-presentation strategies like the use of storytelling, emotional expression, or brand affiliations (ex., wearing sponsored gear or tagging companies). Lastly, I would investigate the tone and message of each video to see whether athletes are portraying themselves as hardworking professionals, approachable peers, or entertaining influencers. 
+
+Conducting the study, I would put my focus into the underlying messages, tone, and meanings conveyed through the videos instead of just the content that is visibly presented. While that content can still reveal patterns in the themes and visuals, the more underlying messages through latent content give a deeper understanding of how athletes construct identity and meaning in their posts. For example, an athlete may post a video of a workout routine (the manifest content), but the underlying tone could communicate discipline, resilience, or authenticity (latent content). Being able to understand these subtle cues is important with social media, where the perceptions are often shaped as much by tone and presentation as by the actual behavior. Analyzing the latent content will also help cover the broader social implications of athlete self-presentation.
+
+TikTok thrives on relatability and authenticity, so an athlete’s tone, whether it is humble, humorous, or confident, may influence how audiences perceive their character and brand. Focusing on the latent meaning, the study could reveal how certain communication styles foster one-sided emotional connections between the athletes and their followers. This has real-world implications for marketing, sponsorships, and even the broader conversation around college athletes’ name, image, and likeness (NIL) opportunities.  This research would examine how college athletes build their personal brands and connect with their audiences. Focusing on the latent content will provide a richer, more nuanced understanding of the message athletes send whether it is intentional or not. This approach highlight the powerful role TikTok plays in the blending of personal expression and audience perception. 
+<!-- RESPONSE-END -->
+
+---
+
+## Word Count & Range Check
+
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+get_response_text <- function() {
+  f <- knitr::current_input()
+  if (is.null(f) || !file.exists(f)) return("")
+  x <- readLines(f, warn = FALSE)
+  # Find the lines that EXACTLY match the start/end markers
+  s <- grep("^<!-- RESPONSE-START -->$", x)
+  e <- grep("^<!-- RESPONSE-END -->$", x)
+  if (length(s) != 1 || length(e) != 1 || e <= s) return("")
+  paste(x[(s + 1L):(e - 1L)], collapse = "\n")
+}
+count_words <- function(txt) {
+  # Remove code blocks and inline code before counting
+  txt <- gsub("```[\\s\\S]*?```", " ", txt, perl = TRUE)
+  txt <- gsub("`[^`]*`", " ", txt, perl = TRUE)
+  # Keep letters, numbers, spaces, hyphens, and apostrophes
+  txt <- gsub("[^\\p{L}\\p{N}\\s'-]", " ", txt, perl = TRUE)
+  # Split by whitespace and count non-empty words
+  words <- unlist(strsplit(txt, "\\s+", perl = TRUE))
+  words <- words[nzchar(words)]
+  length(words)
+}
+txt <- get_response_text()
+n <- count_words(txt)
+minw <- as.integer(params$word_min)
+maxw <- as.integer(params$word_max)
+in_range <- n >= minw && n <= maxw
+cat(sprintf("**Word count:** %d  \n", n))
+cat(sprintf("**Required range (%s):** %d–%d words  \n",
+            toupper(params$course), minw, maxw))
+cat(if (in_range) "**Status:** ✅ In range\n" else "**Status:** ❌ Out of range\n")
+```
