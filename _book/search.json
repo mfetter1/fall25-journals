@@ -318,5 +318,125 @@
     "crumbs": [
       "<span class='chapter-number'>9</span>  <span class='chapter-title'>2025-10-13</span>"
     ]
+  },
+  {
+    "objectID": "entries/2025-11-04.html",
+    "href": "entries/2025-11-04.html",
+    "title": "12  2025-11-04",
+    "section": "",
+    "text": "12.1 Choose one prompt to answer",
+    "crumbs": [
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>2025-11-04</span>"
+    ]
+  },
+  {
+    "objectID": "entries/2025-11-04.html#choose-one-prompt-to-answer",
+    "href": "entries/2025-11-04.html#choose-one-prompt-to-answer",
+    "title": "12  2025-11-04",
+    "section": "",
+    "text": "Prompt B: Imagine you’re analyzing survey data and discover that some responses are missing or strangely formatted. You realize you could remove them, impute values, or rewrite categories to make things “fit.” What would guide your decision-making in that situation? How does data cleaning impact the honesty and transparency of research?",
+    "crumbs": [
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>2025-11-04</span>"
+    ]
+  },
+  {
+    "objectID": "entries/2025-11-04.html#response",
+    "href": "entries/2025-11-04.html#response",
+    "title": "12  2025-11-04",
+    "section": "12.2 Response",
+    "text": "12.2 Response\n\nUnderstanding why data are missing or inconsistent is the first step toward dealing with such a situation. Data may be missing for many reasons, such as participants skipping questions out of confusion, discomfort, or survey fatigue, or possibly even because of technical issues that prevented proper submission. In addition, responses that are strangely formatted suggest poor survey design, miscommunication of instructions, or respondent error. The identified cause can help to establish an appropriate solution. For example, if data loss is random-for example, perhaps a few participants accidentally skipped one question-statistical imputation methods (such as mean substitution or regression-based imputation) may be appropriate. However, if missingness is systematic-for example, if certain groups consistently skip a sensitive question-eliminating those responses could make the data biased. Knowing this, acknowledging one’s limitation and conducting sensitivity analyses would in that case become the far better option ethically and transparently. Clear, preestablished protocols should guide a researcher’s decision-making as well. The research plan/codebook should detail, in advance, how missing or anomalous data are to be treated. This type of proactive planning reduces the potential to engage in subjective decisions that can inadvertently manipulate the outcome. For instance, “rewriting categories to make things fit” might seem like an innocuous way to simplify data, but doing so can distort the original meaning of responses unless it is done in a systematic fashion and with justification. Recoding should only take place when categories conceptually overlap or when collapsing them enhances interpretability without erasing meaningful distinctions. Each modification should be documented in such a way that others can later replicate or evaluate the process. Data cleaning has direct effects on the honesty and transparency of research. Cleaning data is not just a technical but also an ethical step. Transparency implies that any type of changes to the raw data should be fully documented in the methodology section. Researchers should explain what decisions were made, why they were necessary, and how they might affect results. Concealment of the procedures for data cleaning could mislead readers about the reliability of the findings, or it could imply a degree of precision not actually present. Overcleaning data in order to make results appear neater or more statistically significant crosses into unethical territory; it violates the integrity of the dataset and may lead to incorrect conclusions. Ultimately, cleaning should not alter but retain the truth reflected in the data. There is a fine balance between the need to create datasets that can actually be used and the responsibility of not violating the original integrity of participants’ responses. Ethical cleaning is based on transparency, accountability, and respect for limitations in data. By documenting procedures, justifying decisions, and acknowledging uncertainties, researchers ensure their findings are trustworthy and reproducible, upholding principles of honest and transparent scientific inquiry.",
+    "crumbs": [
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>2025-11-04</span>"
+    ]
+  },
+  {
+    "objectID": "entries/2025-11-04.html#word-count-range-check",
+    "href": "entries/2025-11-04.html#word-count-range-check",
+    "title": "12  2025-11-04",
+    "section": "12.3 Word Count & Range Check",
+    "text": "12.3 Word Count & Range Check\n\n\n**Word count:** 460  \n\n\n**Required range (MC501):** 450–500 words  \n\n\n**Status:** ✅ In range",
+    "crumbs": [
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>2025-11-04</span>"
+    ]
+  },
+  {
+    "objectID": "entries/2025-10-21.html",
+    "href": "entries/2025-10-21.html",
+    "title": "10  2025-10-21",
+    "section": "",
+    "text": "10.1 Choose one prompt to answer",
+    "crumbs": [
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>2025-10-21</span>"
+    ]
+  },
+  {
+    "objectID": "entries/2025-10-21.html#choose-one-prompt-to-answer",
+    "href": "entries/2025-10-21.html#choose-one-prompt-to-answer",
+    "title": "10  2025-10-21",
+    "section": "",
+    "text": "Prompt A: Think of a headline or news story you’ve seen that claims one thing causes another (e.g., “Teens who use social media are more likely to be depressed”). Based on what you’ve learned in this chapter, explain why this claim may or may not be valid. What type of research design would be necessary to make such a claim confidently?\n\n\nPrompt B: Choose a communication-related research question you’re interested in (e.g., “Does political meme exposure influence voting confidence?”). Then briefly describe how you might set up a simple experiment to test that question. What would you manipulate? What would you measure? How would random assignment help strengthen your conclusions?\n\n\nPrompt C: Experiments often require researchers to deceive participants or control aspects of their environment. Reflect on how you feel about that. Do you think the benefits of experimental knowledge are worth these trade-offs? What would be essential to include in your debrief if you had to deceive participants in your study?",
+    "crumbs": [
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>2025-10-21</span>"
+    ]
+  },
+  {
+    "objectID": "entries/2025-10-21.html#response",
+    "href": "entries/2025-10-21.html#response",
+    "title": "10  2025-10-21",
+    "section": "10.2 Response",
+    "text": "10.2 Response\n\nI think experiments play a crucial role in furthering psychological and social science research by allowing researchers to identify a cause-and-effect relationships. However, they require manipulating variables or even deceiving their participants to maintain the integrity of the study. This brings up the question about whether the benefits of experimental knowledge gained justify the exchange of deception and control. I think that it is important that ethical principles like informed consent, remain at the center of any research involving deception. However, using deception comes with serious ethical implications. Misleading participants, even if it’s temporary, can cause emotional distress, embarrassment, or feelings of betrayal once they figure out the truth. In comparison, tightly controlling a participant’s environment, like restricting their choices or exposing them to stress, can make the participants feel manipulated. To justify these trade-offs, researchers must ensure that the benefits of the study significantly outweigh the risks and that there is no alternative and no deceptive method could produce equally valid results. If I were conducting a study that required deception, I would consider the debriefing process to be essential. I would provide a thorough and thoughtful debrief to help repair the trust between researcher and participant to ensure no lasting harm was done. In my debrief, I would clearly explain the true purpose of the study and the reasons for the deception and why it is necessary. I would emphasize that their participation and genuine reactions are very important to understanding the research question that the deception was not meant to trick or embarrass them. I would also open to the participant to share any questions or concerns about their experience. Furthermore, I will also reiterate the participants right to withdraw their data if they feel uncomfortable with the deception after they learnt the truth. This will also help with an potential feelings of being misled. Finally, if the experiment could have caused any emotional discomfort, like anxiety or guilt, I would provide information on available support resources or counseling services. I understand that while deception and control in experiment can be ethically complex, I think that there are justified uses for it if it is used responsible and transparent. The pursuit of knowledge should not come at the cost of human dignity. Therefore, if researchers uphold ethical standards, minimize their harm, and prioritize a compassionate and honest debriefing process, the benefits of the experimental knowledge can out weight the trade-off. Experiments are very important for discovery, allowing researchers to explore complex human thoughts and behaviors in ways surveys and observations can’t. Despite these ethical challenges, these studies help society progress, and improve education, healthcare, and workplace practices. As long as researchers prioritize participant welfare, transparency, and ethical accountability. The knowledge gained through experiments can meaningfully and responsibly advance our collective understanding of human nature and social interaction.",
+    "crumbs": [
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>2025-10-21</span>"
+    ]
+  },
+  {
+    "objectID": "entries/2025-10-21.html#word-count-range-check",
+    "href": "entries/2025-10-21.html#word-count-range-check",
+    "title": "10  2025-10-21",
+    "section": "10.3 Word Count & Range Check",
+    "text": "10.3 Word Count & Range Check\n\n\n**Word count:** 473  \n\n\n**Required range (MC501):** 450–500 words  \n\n\n**Status:** ✅ In range",
+    "crumbs": [
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>2025-10-21</span>"
+    ]
+  },
+  {
+    "objectID": "entries/2025-10-26.html",
+    "href": "entries/2025-10-26.html",
+    "title": "11  2025-10-26",
+    "section": "",
+    "text": "11.1 Choose one prompt to answer",
+    "crumbs": [
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>2025-10-26</span>"
+    ]
+  },
+  {
+    "objectID": "entries/2025-10-26.html#choose-one-prompt-to-answer",
+    "href": "entries/2025-10-26.html#choose-one-prompt-to-answer",
+    "title": "11  2025-10-26",
+    "section": "",
+    "text": "Prompt A: Think about a media environment you engage with regularly—TikTok, news headlines, TV dramas, YouTube comments, etc. Choose one and describe a research question that could be answered through content analysis. What would you want to measure? Would you be more interested in manifest content (what’s there) or latent content (the underlying tone or message), and why?",
+    "crumbs": [
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>2025-10-26</span>"
+    ]
+  },
+  {
+    "objectID": "entries/2025-10-26.html#response",
+    "href": "entries/2025-10-26.html#response",
+    "title": "11  2025-10-26",
+    "section": "11.2 Response",
+    "text": "11.2 Response\n\nA research question I could investigate through content analysis on TikTok is, “How do college athletes use TikTok to shape their personal brand and influence audience perceptions of authenticity?” This is a question that investigates how athletes represent themselves on a platform driven by short-form video content and trends, and how that representation connects with audiences’ views on credibility, relatability, and marketability. TikTok is a very new and unique site for this kind of study because it looks to combine the entertainment, self-presentation, and interaction in ways that influence both personal identity and public perception.\nWith content analysis, I would look to measure many different factors. To start, I would identify the types of content athletes post, like game highlights, training videos, lifestyle, and fun trends, to see which videos are the most common. I would also analyze their engagement metrics, including their likes, comments, and shares to determine which types of posts generate the most audience interaction. I would also look to measure self-presentation strategies like the use of storytelling, emotional expression, or brand affiliations (ex., wearing sponsored gear or tagging companies). Lastly, I would investigate the tone and message of each video to see whether athletes are portraying themselves as hardworking professionals, approachable peers, or entertaining influencers.\nConducting the study, I would put my focus into the underlying messages, tone, and meanings conveyed through the videos instead of just the content that is visibly presented. While that content can still reveal patterns in the themes and visuals, the more underlying messages through latent content give a deeper understanding of how athletes construct identity and meaning in their posts. For example, an athlete may post a video of a workout routine (the manifest content), but the underlying tone could communicate discipline, resilience, or authenticity (latent content). Being able to understand these subtle cues is important with social media, where the perceptions are often shaped as much by tone and presentation as by the actual behavior. Analyzing the latent content will also help cover the broader social implications of athlete self-presentation.\nTikTok thrives on relatability and authenticity, so an athlete’s tone, whether it is humble, humorous, or confident, may influence how audiences perceive their character and brand. Focusing on the latent meaning, the study could reveal how certain communication styles foster one-sided emotional connections between the athletes and their followers. This has real-world implications for marketing, sponsorships, and even the broader conversation around college athletes’ name, image, and likeness (NIL) opportunities. This research would examine how college athletes build their personal brands and connect with their audiences. Focusing on the latent content will provide a richer, more nuanced understanding of the message athletes send whether it is intentional or not. This approach highlight the powerful role TikTok plays in the blending of personal expression and audience perception.",
+    "crumbs": [
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>2025-10-26</span>"
+    ]
+  },
+  {
+    "objectID": "entries/2025-10-26.html#word-count-range-check",
+    "href": "entries/2025-10-26.html#word-count-range-check",
+    "title": "11  2025-10-26",
+    "section": "11.3 Word Count & Range Check",
+    "text": "11.3 Word Count & Range Check\n\n\n**Word count:** 468  \n\n\n**Required range (MC501):** 450–500 words  \n\n\n**Status:** ✅ In range",
+    "crumbs": [
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>2025-10-26</span>"
+    ]
   }
 ]
