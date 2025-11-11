@@ -438,5 +438,45 @@
     "crumbs": [
       "<span class='chapter-number'>11</span>  <span class='chapter-title'>2025-10-26</span>"
     ]
+  },
+  {
+    "objectID": "entries/2025-11-09.html",
+    "href": "entries/2025-11-09.html",
+    "title": "13  2025-11-09",
+    "section": "",
+    "text": "13.1 Choose one prompt to answer",
+    "crumbs": [
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>2025-11-09</span>"
+    ]
+  },
+  {
+    "objectID": "entries/2025-11-09.html#choose-one-prompt-to-answer",
+    "href": "entries/2025-11-09.html#choose-one-prompt-to-answer",
+    "title": "13  2025-11-09",
+    "section": "",
+    "text": "Prompt C: The chapter describes descriptive analysis as a “first conversation” with your data. Why is it essential to fully describe your sample before jumping to conclusions or testing hypotheses? How might skipping this step lead to bad research or misleading claims?",
+    "crumbs": [
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>2025-11-09</span>"
+    ]
+  },
+  {
+    "objectID": "entries/2025-11-09.html#response",
+    "href": "entries/2025-11-09.html#response",
+    "title": "13  2025-11-09",
+    "section": "13.2 Response",
+    "text": "13.2 Response\n\nDescriptive analysis can often be called the “first conversation” with your data for a reason, before you can make any big claims or run a statistical test. You need to understand who and what you’re working with. Describing your sample fully is like taking a step back and looking at the whole picture. Looking specifically at who participated? How many people responded? What does the average look like? Are there big differences within the group? These details are important because they set the stage for everything that is next to come. If you skip this step, you risk building your entire research story. One of the reasons to start with descriptive analysis is that it helps prevent bias and misinterpretation. If the sample is mainly demographic, like young adults, you can assume your results apply to all age groups. Without knowing how your participants are distributed, the findings might accidently be presented a universal when they aren’t. Descriptive statistics like means, medias, percentages, and ranges, can help see whether your sample is balanced or if certain groups are underrepresented or overrepresented. This awareness influences how you interpret the results and how you communicate them. Descriptive analysis also reveals potential data issues early. For example, missing responses, extreme. Outliers, or oddly formatted answers that can seriously distort results. One outlier can bring the mean way down or up making it seem like something meaningful is happening when there is just an error or an odd data response. If data isn’t looked at closely before testing the hypotheses, he wrong statistical test might be ran or the results are technically “significant” but complete misleading. Descriptive analysis acts as a reality check to show what is there versus what you expect and hope to see. Skipping this step can lead to flawed and misleading claims. Jumping straight into hypothesis testing without understanding your data, the conclusions may reflect errors, imbalances or noise rather than genuine patterns. You could happen to unintentionally generalized results o groups you never properly analyzed or overlooked limitations that would have been obvious if the time was taken to explore the data first. This can potentially mis lead readers, create false confidence, or influence decisions based on inaccurate information. In fields like health, education, or public policies, these mistakes can lead to real consequences and even lead to harmful or poorly informed actions. Descriptive analysis is essential because it keeps researchers honest. It makes you slow down and look carefully to understand the dataset before claims are made. It builds transparency and trust by showing readers exactly who participated and the kind of data that was used. Treating descriptive analysis as a meaningful first step instead of a chore, researchers set themselves up for stronger, cleaner, and more responsible conclusions.",
+    "crumbs": [
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>2025-11-09</span>"
+    ]
+  },
+  {
+    "objectID": "entries/2025-11-09.html#word-count-range-check",
+    "href": "entries/2025-11-09.html#word-count-range-check",
+    "title": "13  2025-11-09",
+    "section": "13.3 Word Count & Range Check",
+    "text": "13.3 Word Count & Range Check\n\n\n**Word count:** 464  \n\n\n**Required range (MC501):** 450–500 words  \n\n\n**Status:** ✅ In range",
+    "crumbs": [
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>2025-11-09</span>"
+    ]
   }
 ]
