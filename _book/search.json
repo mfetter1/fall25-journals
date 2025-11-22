@@ -478,5 +478,45 @@
     "crumbs": [
       "<span class='chapter-number'>13</span>  <span class='chapter-title'>2025-11-09</span>"
     ]
+  },
+  {
+    "objectID": "entries/2025-11-17.html",
+    "href": "entries/2025-11-17.html",
+    "title": "14  2025-11-17",
+    "section": "",
+    "text": "14.1 Choose one prompt to answer",
+    "crumbs": [
+      "<span class='chapter-number'>14</span>  <span class='chapter-title'>2025-11-17</span>"
+    ]
+  },
+  {
+    "objectID": "entries/2025-11-17.html#choose-one-prompt-to-answer",
+    "href": "entries/2025-11-17.html#choose-one-prompt-to-answer",
+    "title": "14  2025-11-17",
+    "section": "",
+    "text": "Prompt A: This chapter describes inference as a “leap” from sample to population. Reflect on what makes that leap trustworthy—or risky. Why is it not enough to observe a pattern in your sample? How does hypothesis testing help, and what limits remain even when your results are statistically significant?",
+    "crumbs": [
+      "<span class='chapter-number'>14</span>  <span class='chapter-title'>2025-11-17</span>"
+    ]
+  },
+  {
+    "objectID": "entries/2025-11-17.html#response",
+    "href": "entries/2025-11-17.html#response",
+    "title": "14  2025-11-17",
+    "section": "14.2 Response",
+    "text": "14.2 Response\n\nIn this chapter, inference is described as a “leap” from a sample to a population, and hypothesis testing offers the structure that helps make that leap more trustworthy. However, even with statistical tools, the leap is never risk-free. Understanding the why requires examining both how hypotheses and testing work and what their limits are.\nA pattern observed in a sample is never enough on its own because samples are imperfect and representations of the population. Random chance, sampling error, and uneven group assignments can all produce differences that appear meaningful but actually reflect noise rather than a genuine effect. Without a formal way to evaluate how probable a sample result is under the assumption of no real relationship, researchers risk mistaking coincidence for evidence. This is why simply seeing a difference like a 10-point test score increase by the treatment group and the control group. This is not as compelling on its own. We need to know whether the difference could easily appear even if the treatment had no actual effect.\nTesting a hypothesis by introducing a cautious process that begins with assuming the null hypothesis is true. This forces researchers to evaluate how surprising their data would be if there really were no relationship in the population. The p-value tells us that if the probability is very small, the result is statistically significant, and we reject the null hypothesis. This does not prove the research hypothesis, but it does provide evidence that the observed pattern is unlikely to be due to random chance alone.\nThe chapter also talks about how hypothesis testing protects against two types of errors. Type I errors occur when we reject a true null hypothesis, while type II errors occur when we fail to detect a real effect. These errors highlight the unavoidable risks of drawing conclusions from incomplete information. Even when a result is statistically significant, there is still a chance of a 5% that we are wrong. Recognizing these risks can help make the leap from sample to population more careful and transparent. Even with hypothesis testing, there are still important limits. Statistical significance only addresses whether an effect is likely real; it says nothing about how large or meaningful that effect is. With large samples, even trivial differences can become statistically significant. The chapter underscores the importance of effect size as a measure of practical importance. This is something that hypothesis testing alone cannot provide. A tiny effect may be real but irrelevant, and reporting only significance levels can mislead readers into overestimating the impact of a finding. Finally, statistical significance cannot address issues like biased samples. Poor measurements or confounding variables. Even a well-executed test does not establish causation or guarantee that results generalize beyond the sample.",
+    "crumbs": [
+      "<span class='chapter-number'>14</span>  <span class='chapter-title'>2025-11-17</span>"
+    ]
+  },
+  {
+    "objectID": "entries/2025-11-17.html#word-count-range-check",
+    "href": "entries/2025-11-17.html#word-count-range-check",
+    "title": "14  2025-11-17",
+    "section": "14.3 Word Count & Range Check",
+    "text": "14.3 Word Count & Range Check\n\n\n**Word count:** 0  \n\n\n**Required range (MC501):** 450–500 words  \n\n\n**Status:** ❌ Out of range",
+    "crumbs": [
+      "<span class='chapter-number'>14</span>  <span class='chapter-title'>2025-11-17</span>"
+    ]
   }
 ]
