@@ -518,5 +518,15 @@
     "crumbs": [
       "<span class='chapter-number'>14</span>  <span class='chapter-title'>2025-11-17</span>"
     ]
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Course Journal",
+    "section": "",
+    "text": "This journal renders as a book. Each dated entry is a chapter.\n\nMC 451 entries: 250–300 words\nAt the end of each chapter you’ll see three prompts. Answer only one.\nWrite your answer in the Response box; the page shows an automatic word count and whether you’re in range.\n\n\n0.0.1 Add a new entry\n\nIn R, run: source(\"scripts/new_journal_entry.R\")\nA new chapter like entries/2025-09-01.qmd appears with three prompts injected.\nThe script updates _quarto.yml so the new entry is included in the book.\nRender the book: click Render in RStudio or run quarto render.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Journal Home</span>"
+    ]
   }
 ]
